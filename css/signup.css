@@ -1,0 +1,8 @@
+body,
+.container,
+input {
+  background-color: #24353f !important;
+}
+.form-control::placeholder {
+    color: white !important;
+}

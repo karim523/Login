@@ -1,0 +1,61 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignUp</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/signup.css" />
+  </head>
+  <body>
+    <div
+      class="container w-50 mx-auto text-center shadow-lg p-3 mb-5 bg-body-tertiary rounded p-4 m-5"
+    >
+      <h1 class="text-info">Smart Login System</h1>
+      
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control text-light"
+            id="name"
+            placeholder="Enter Your Name"
+            aria-label="Enter Your Name"
+            aria-describedby="button-addon2"
+            oninput="validationInputs(this)"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="email"
+            id="mail"
+            class="form-control text-light"
+            placeholder="Enter Your Email"
+            aria-label="Enter Your Email"
+            aria-describedby="button-addon2"
+            oninput="validationInputs(this)"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="password"
+            id="pass"
+            class="form-control text-light"
+            placeholder="Enter Your Password"
+            aria-label="Enter Your Password"
+            aria-describedby="button-addon2"
+            oninput="validationInputs(this)"
+          />
+        </div>
+        <p class="text-success d-none">Success</p>
+
+        <button class="btn btn-outline-info col-12" id="btn-log" onclick="signUp()">
+          SignUp
+        </button>
+     
+      
+      <p class="text-light">You have an account? <a href="#" id="log">Signin </a></p>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/signup.js"></script>
+  </body>
+</html>
