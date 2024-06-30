@@ -4,6 +4,10 @@ var PassInput = document.getElementById("pass");
 
 var UsersList = [];
 
+if (localStorage.getItem("UserContainer") !== null) {
+  UsersList = JSON.parse(localStorage.getItem("UserContainer"));
+}
+
 function signUp() {
   if (
     validationInputs(NameInput) &&

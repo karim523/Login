@@ -1,8 +1,7 @@
-var LogMailInput = document.getElementById('log-mail');
-var LogPassInput = document.getElementById('log-pass');
+var LogMailInput = document.getElementById("log-mail");
+var LogPassInput = document.getElementById("log-pass");
 
-
-UsersList=JSON.parse(localStorage.getItem("UserContainer"));
+UsersList = JSON.parse(localStorage.getItem("UserContainer"));
 
 function login() {
   for (let i = 0; i < UsersList.length; i++) {
@@ -10,14 +9,11 @@ function login() {
       LogMailInput.value == UsersList[i].mail &&
       LogPassInput.value == UsersList[i].pass
     ) {
-     
-     
       sessionStorage.setItem("UserName", JSON.stringify(UsersList[i].name));
-        window.location = './home.html';
-      
+      window.location = "./home.html";
     } else {
-      var a = document.getElementById('a');
-      a.classList.remove("d-none");
+      var warning = document.getElementById("warn");
+      warning.classList.remove("d-none");
     }
   }
 }
@@ -25,5 +21,3 @@ function login() {
 document.getElementById("sign").addEventListener("click", function () {
   window.location = "./signup.html";
 });
-
-
